@@ -1,5 +1,6 @@
-/*------------------------------ VARIABLES */
+@import url('https://fonts.googleapis.com/css?family=Lilita+One|Raleway');
 
+/*------------------------------ VARIABLES */
 :root {
 
     /* fonts */
@@ -60,6 +61,18 @@ video {
 }
 
 /*------------------------------ HEADINGS AND TYPE */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--font-heading);
+    color: var(--strong-text-color);
+    font-weight: normal;
+}
+
+
+
 /*------------------------------ LAYOUTS */
 .layout-full-width,
 .layout-wide {
@@ -116,7 +129,55 @@ footer {
     background-color: var(--alternative-bg-color);
 }
 
+.footer-subscribe {
+    background-color: var(--secondary-bg-color);
+    padding-top: var(--spacer-large);
+    padding-bottom: var(--spacer-large);
+    text-align: center;
+}
+
+.footer-notices {
+    padding-top: var(--spacer);
+    padding-bottom: var(--spacer);
+}
+
+.footer-notices .layout-wide {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.copyright {
+    color: #fff;
+}
 /*------------------------------ FORMS */
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"], 
+input[type="email"] {
+    border-color: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px;
+    width: 480px;
+    max-width: 100%;
+    margin-bottom: var(--spacer);
+}
+
+input[type="submit"] {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    background-color: var(--alternative-bg-color);
+    
+    border-radius: 30px;
+    padding: var(--padder);
+    min-width: 200px;
+
+    color: white;
+}
+
+
 /*------------------------------ MODULES */
 
 

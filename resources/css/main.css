@@ -172,6 +172,7 @@ header .layout-wide {
 
 .nav-inner {
     margin-bottom: 0;
+    padding-bottom: var(--padder);
 }
 
 .nav-inner ul {
@@ -195,6 +196,11 @@ header .layout-wide {
 
 .nav-inner a:hover {
     color: var(--error-color);
+}
+
+.nav-inner .active {
+    border-bottom: 2px solid white;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 800px) {

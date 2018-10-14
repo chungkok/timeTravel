@@ -41,6 +41,15 @@
     --font-size-heading-small: 16px;
 }
 
+@media screen and (min-width: 800px) {
+
+    :root {
+        --font-size-site-title: 54px;
+        --font-size-page-title: 80px;
+        --font-size-section-title: 48px;
+    }
+}
+
 
 /*------------------------------ GLOBAL DEAFAULTS */
 * {
@@ -143,6 +152,83 @@ header .layout-wide {
 }
 
 /*------------------------------ NAVIGATION */
+.navigation {
+    background-color: var(--alternative-bg-color);
+    
+    /* stick the navigation bar on top */
+    position: sticky;
+    top: 0;
+}
+
+.nav-prompt {
+    width: 100%;
+    background-color: var(--alternative-bg-color);
+    color: white;
+    border: none;
+    border-top: 1px solid black;
+    padding-top: var(--padder);
+    padding-bottom: var(--padder);
+}
+
+.nav-inner {
+    margin-bottom: 0;
+}
+
+.nav-inner ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-inner li {
+    text-align: center;
+}
+
+.nav-inner a {
+    display: block;
+    color: white;
+    padding: var(--spacer) 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-inner a:hover {
+    color: var(--error-color);
+}
+
+@media screen and (min-width: 800px) {
+
+    .nav-prompt {
+        display: none;
+    }
+
+    .nav-inner ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-inner {
+        border-bottom: 2px solid transparent;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .nav-inner {
+        overflow: hidden;
+        transition: var(--transition-time);
+    }
+
+    .nav-inner[aria-expanded="false"] {
+        max-height: 0;
+    }
+
+    .nav-inner[aria-expanded="true"] {
+        max-height: 100vh;
+    }
+}
+
 /*------------------------------ FOOTER */
 footer {
     background-color: var(--alternative-bg-color);

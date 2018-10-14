@@ -158,6 +158,8 @@ header .layout-wide {
     /* stick the navigation bar on top */
     position: sticky;
     top: 0;
+
+    z-index: 10;
 }
 
 .nav-prompt {
@@ -322,3 +324,11 @@ input[type="submit"] {
 
 }
 
+/* grids */
+@media screen and (min-width: 800px) {
+    .content-area-grid {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        justify-content: space-between;
+    }
+}

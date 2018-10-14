@@ -73,7 +73,6 @@ iframe {
     max-width: 100%;
 }
 
-
 /*------------------------------ HEADINGS AND TYPE */
 h1,
 h2,
@@ -363,4 +362,33 @@ input[type="submit"] {
 .image-gallery a:hover img {
     filter: unset;
     transform: scale(1.05);
+}
+
+/* animations */
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+main {
+    animation-name: fadein;
+    animation-duration: var(--transition-time);
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.logo-wrapper a:hover img {
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
